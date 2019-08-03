@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show] do 
-    resources :exchanges, only: [:create]
     resources :promo_codes, only: [:index, :show]
+  end
+
+  resources :promo_codes, only: [] do
+    resources :exchanges, only: [:create]
   end
 
   resources :works, only: [:index, :show] do

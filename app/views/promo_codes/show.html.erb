@@ -1,2 +1,29 @@
-<p><%= @promo_code.id %></p>
-<p><%= @promo_code.formatted_value %></p>
+<div class="promo-code-show">
+  <h1><%= @promo_code.company_name %></h1>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="promo-card">
+        <div class="container">
+          <div class="row">
+            <div class="col order-first">
+             <%= image_tag "hospital.png", class: "logo" %>
+            </div>
+            <div class="col">
+              <%= @promo_code.required_points %>
+            </div>
+            <div class="col">
+              a
+            </div>
+                        
+            <div class="col order-last">
+              <%= @promo_code.formatted_value %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TODO link expense create -->
+</div>
+

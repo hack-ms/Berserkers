@@ -1,25 +1,31 @@
-<h1>Troque seus pontos por um cupom da lista, essa troca não pode ser desfeita depois de confirmada.</h1>
+<div class="promo-code-index">
+  <h1>Troque seus pontos por um cupom da lista, essa troca não pode ser desfeita depois de confirmada.</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% if @promo_codes.present? %>
-      <% @promo_codes.each do |promo_code| %>
-        <%= link_to user_promo_code_path(:me, promo_code) do  %>
-          aaaaaaaaaa
-        <% end %>
+  <% if @promo_codes.present? %>
+    <% @promo_codes.each do |promo_code| %>
+      <%= link_to user_promo_code_path(:me, promo_code) do  %>
+        <div class="row">
+          <div class="col-12">
+            <div class="promo-card">
+              <div class="row">
+                <div class="col-4 price line">
+                  <%= promo_code.required_points %>
+                  <span>Pontos</span> 
+                </div>  
+                <div class="col-8 description">
+                  <p class="title">
+                    Cupom de <%= promo_code.formatted_value %> - <%= promo_code.company_name.truncate(10) %>
+                  </p>
+                  <span><%= promo_code.description.truncate(30) %></span>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-    <% else %>
-      Sem código promocionais para sua pontuação      
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
+  <% else %>
+    Sem código promocionais para sua pontuação      
+  <% end %>
+</div>
 
