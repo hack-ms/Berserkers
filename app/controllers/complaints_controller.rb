@@ -10,6 +10,7 @@ class ComplaintsController < ApplicationController
     complaint = current_user.complaints.create(complaint_params.merge(work_id: @work.id))
 
     if complaint.persisted?
+      current_user.increment_score
       flash[:notice] = "Denúncia criada com sucesso"
     else
       flash[:error] = "Erro ao criar denúncia"
