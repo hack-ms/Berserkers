@@ -1,29 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 **Configuração do Gemset**
 
 Dentro da pasta do projeto, crie os arquivos `.ruby-version` e `.ruby-gemset` e depois entre novamente na pasta para carregar as novas configurações.
@@ -53,13 +29,9 @@ Por fim, crie o banco de dados, rode as migrations e popule o mesmo.
 $ rails db:create db:migrate db:seed
 ```
 
-**Testes**
-
-Utilizamos o framework de testes Rspec e cucumber para execução de testes.
-
+**URL para acessar**
 ```bash
-$ rake rspec
-$ rake cucumber
+$ https://berserkersapp.herokuapp.com/
 ```
 
 **Start do servidor**
