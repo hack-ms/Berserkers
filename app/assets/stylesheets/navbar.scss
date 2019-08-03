@@ -1,0 +1,60 @@
+@media (max-width: 576px) {
+  .l-nav {
+    background: #3062BF;
+    height: 68px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    min-height: 0;
+    top: 0;
+
+    .container-navbar {
+      background: white;
+    }
+
+    .navigation {
+      margin-bottom: 20px;
+
+      a {
+        padding: 0 8px;
+      }
+
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+      }
+      .menu {
+        padding-left: 0;
+      }
+
+      .logo {
+        height: 32px;
+      }
+    }
+    .nav-categories {
+      padding: 0 0 24px;
+    }
+
+    .nav-collapse {
+      ul {
+        width: 100%;
+        li {
+
+          width: 100%;
+          text-align: center;
+          padding: 8px 0;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
