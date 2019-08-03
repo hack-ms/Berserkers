@@ -78,5 +78,5 @@
   </div>
 </div>
 <p id="notice"><%= notice %></p>
-<%= link_to 'ACOMPANHAR OBRA', new_work_complaint_path(@work), class: 'btn btn-primary favorite-btn' %>
-<%= link_to 'POSSÍVEL IRREGULARIDADE', work_favorites_path(@work), class: 'btn btn-primary complaint-btn' %>
+<%= link_to 'ACOMPANHAR OBRA', work_favorites_path(@work), class: 'btn btn-primary favorite-btn' %>
+<%= link_to 'AVALIAR OBRA', new_work_complaint_path(@work), class: 'btn btn-primary complaint-btn' %>
