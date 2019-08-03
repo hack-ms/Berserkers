@@ -20,6 +20,9 @@
     <%= form.label :photo %>
     <%= form.file_field :photo, multiple: false, accept: 'image/png,image/jpeg' %>
   </div>
+  
+  <%= form.hidden_field :lat, id: "js-lat" %>
+  <%= form.hidden_field :lng, id: "js-lng" %>
 
   <div class="actions">
     <%= form.submit %>
