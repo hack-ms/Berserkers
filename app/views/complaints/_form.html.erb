@@ -10,22 +10,22 @@
       </ul>
     </div>
   <% end %>
-  
+
   <div class="form-group">
     <!-- < %= form.label :description %> -->
     <%= form.text_area :description, required: true, autofocus: true, class: "form-control", placeholder: "O que você encontrou?" %>
   </div>
-  
+
   <div class="form-group">
     <span id='val'></span>
     <input type='file'/>
-    <span id='button'>Enviar foto</span>    
+    <span id='button'>Enviar foto</span>
   </div>
 
-  <%= form.hidden_field :lat, id: "js-lat" %>
-  <%= form.hidden_field :lng, id: "js-lng" %>
+  <%= form.hidden_field :lat, id: "js_lat" %>
+  <%= form.hidden_field :lng, id: "js_lng" %>
   <%= form.file_field :photo, multiple: false, accept: 'image/png,image/jpeg'%>
-  
+
 
   <%= form.submit "Alerta", class: "btn btn-primary" %>
 <% end %>
