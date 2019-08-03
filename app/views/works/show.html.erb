@@ -3,7 +3,11 @@
   <span class="work-city-name"><%= @work.city.name.capitalize %> - MS</span>
 </div> -->
 <div class="work-image">
-  <%= image_tag @work.image_url %>
+  <% if @work.image_url.present? %>
+    <%= image_tag @work.image_url %>
+  <% else %>
+    <%= image_tag("hospital.png") %>
+  <% end %>
 </div>
 
 <div class="row">
@@ -77,6 +81,11 @@
     </div>
   </div>
 </div>
-<p id="notice"><%= notice %></p>
-<%= link_to 'ACOMPANHAR OBRA', work_favorites_path(@work), class: 'btn btn-primary favorite-btn' %>
+
+<% if @favorite.present? %>
+  <%= link_to 'PARAR DE ACOMPANHAR', work_favorite_path(@work, @favorite), method: :delete, class: 'btn btn-primary favorite-btn' %>
+<% else %>
+  <%= link_to 'ACOMPANHAR OBRA', work_favorites_path(@work), method: :post, class: 'btn btn-primary favorite-btn' %>
+<% end %>
+
 <%= link_to 'AVALIAR OBRA', new_work_complaint_path(@work), class: 'btn btn-primary complaint-btn' %>
