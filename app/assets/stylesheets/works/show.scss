@@ -94,7 +94,7 @@
 
 .complaint-btn {
   border-radius: 4px;
-  background-color: #FF4D4D;
+  background-color: #3062BF;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -103,12 +103,12 @@
   width: 100%;
 }
 .favorite-btn {
-  background-color: #3062BF;
+  border: solid 1px #3062BF;
+  color: #3062BF;
+  background-color: #FAFAFA;
   border-radius: 4px;
-  color: white;
   font-size: 16px;
   font-weight: bold;
-  border: none;
   padding: 14px;
   width: 100%;
   margin-bottom: 10px;
