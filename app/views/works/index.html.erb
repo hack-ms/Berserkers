@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Works</h1>
+<h1>Obras</h1>
 
 <table>
   <thead>
@@ -14,7 +12,8 @@
       <tr>
         <td><%= work.id %></td>
         <td><%= work.idn_empreendimento %></td>
-        <td><%= link_to 'Show', work %></td>
+        <td><%= link_to 'Visualizar obra', work_path(work) %></td>
+        <td><%= link_to 'Favoritar obra', work_favorites_path(work) %></td>
       </tr>
     <% end %>
   </tbody>
