@@ -1,0 +1,47 @@
+.works-list {
+  margin-top: 80px;
+  background-color: white;
+
+  .work-card {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+
+    img {
+      height: 172px;
+      width: 100%;
+      border-radius: 4px 4px 0px 0px;
+    }
+
+    .work-description {
+      padding: 4px 10px;
+
+      .work-name-index {
+        padding: 0px 4px;
+        margin-top: 10px;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      .work-city-name-index {
+        padding: 0px 4px;
+        color: #000000;
+        font-size: 12px;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  select {
+    border-radius: 4px;
+    width: 100%;
+    background-color: white;
+    height: 36px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+  }
+}

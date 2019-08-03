@@ -17,6 +17,7 @@ gem 'devise'
 gem 'toastr-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'has_scope'
 
 # Image upload
 gem 'carrierwave', '~> 1.0'
