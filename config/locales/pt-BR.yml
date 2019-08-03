@@ -1,4 +1,57 @@
 pt-BR:
+  activerecord:
+    models:
+      city: Cidade
+      complaint: Feedback
+      favorite: Acompanhamento
+      promo_code: Códigos promocionais
+      user: Usuário
+      work: Obras
+      work_type: Tipos de obras
+    attributes:
+      user: 
+        email: Email
+        password: Senha
+        name: Nome completo
+        score: Pontuação
+        created_at: Criado em
+        updated_at: Atualizado em
+      city:
+        created_at: Criado em
+        updated_at: Atualizado em
+        name: Nome
+      complaint:
+        lat: Latitude
+        lng: Longitude
+        photo: Foto
+        description: O que foi encontrado?
+        user: Usuário
+        work: Obra
+        created_at: Criado em
+        updated_at: Atualizado em
+      promo_code:
+        company_name: Nome da empresa
+        created_at: Criado em
+        updated_at: Atualizado em
+        quantity: Quantidade de códigos
+        code: Código
+      work:
+        lat: Latitude
+        lng: Longitude
+        idn_empreendimento: Identificador da obra
+        data_conclusao: Data de conclusão
+        data_selecao: Data de seleção
+        estagio: Estágio
+        execucao_fisica: Progresso
+        obra_nome: Nome da obra
+        city: Cidade
+        work_type: Tipo de obra
+        investment: Investimento
+        image_url: URL da image
+        executor: executor
+        orgao_responsavel: Orgão responsável
+      work_type:
+        name: Nome
   admin:
     actions:
       index:
