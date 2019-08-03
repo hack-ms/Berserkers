@@ -1,24 +1,18 @@
-<h1>Obras</h1>
+<div class="works-list">
+  <%= form_tag works_path, url: works_path, method: :get do %>
+    <%= select_tag :by_city_id, options_for_select(@cities.collect { |city| [city.name.capitalize, city.id] }, [@selected_city&.name&.capitalize, @selected_city&.id]), include_blank: 'Escolha uma cidade' %>
+    <%= submit_tag '', id: 'submit_city', hidden: true %>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @works.each do |work| %>
-      <tr>
-        <td><%= work.id %></td>
-        <td><%= work.idn_empreendimento %></td>
-        <td><%= link_to 'Visualizar obra', work_path(work) %></td>
-        <td><%= link_to 'Acompanhar obra', work_favorites_path(work) %></td>
-      </tr>
+  <% @works.each do |work| %>
+    <%= link_to work_path(work) do %>
+      <div class="work-card">
+        <%= image_tag work.image_url || 'https://s3.amazonaws.com/jera-ligilo/img-placeholder-imovel.png' %>
+        <div class="work-description">
+          <p class="work-name-index no-absolute"><%= work.obra_nome %></p>
+          <p class="work-city-name-index"><%= work.city.name %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
+  <% end %>
+</div>

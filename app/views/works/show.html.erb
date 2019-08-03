@@ -1,25 +1,22 @@
-<!-- <div class="work-title">
-  <p class="work-name" ><%= @work.obra_nome %></p>
+<div class="work-image-shadow"></div>
+<p class="work-name" ><%= @work.obra_nome %>
+  <br>
   <span class="work-city-name"><%= @work.city.name.capitalize %> - MS</span>
-</div> -->
+</p>
 <div class="work-image">
-  <% if @work.image_url.present? %>
-    <%= image_tag @work.image_url %>
-  <% else %>
-    <%= image_tag("hospital.png") %>
-  <% end %>
+  <%= image_tag @work.image_url || 'https://s3.amazonaws.com/jera-ligilo/img-placeholder-imovel.png' %>
 </div>
 
 <div class="row">
   <div class="col-6">
     <div class="date-card">
-      <p class="work-dates"><%= @work.data_conclusao.strftime("%d/%m/%Y") %></p>
+      <p class="work-dates"><%= @work.data_selecao.strftime("%d/%m/%Y") %></p>
       <p class="work-dates-description">Início</p>
     </div>
   </div>
   <div class="col-6">
     <div class="date-card">
-      <p class="work-dates"><%= @work.data_selecao.strftime("%d/%m/%Y") %></p>
+      <p class="work-dates"><%= @work.data_conclusao.strftime("%d/%m/%Y") %></p>
       <p class="work-dates-description">Conclusão</p>
     </div>
   </div>
