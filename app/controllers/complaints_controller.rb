@@ -22,10 +22,10 @@ class ComplaintsController < ApplicationController
   private
     def set_work
       @work = Work.find_by(id: params[:work_id])
-      return redirect_to works_path unless @work.present?        
+      return redirect_to works_path unless @work.present?
     end
 
     def complaint_params
-      params.require(:complaint).permit(:description, :photo)
+      params.require(:complaint).permit(:description, :photo, :lat, :lng)
     end
 end

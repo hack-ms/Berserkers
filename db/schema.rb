@@ -56,12 +56,12 @@ ActiveRecord::Schema.define(version: 2019_08_03_211134) do
     t.string "company_name"
     t.string "code"
     t.string "quantity", default: "0"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "required_points", default: 1
     t.string "formatted_value"
     t.string "company_logo"
-    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|
