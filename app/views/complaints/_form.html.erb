@@ -22,11 +22,10 @@
     <span id='button'>Enviar foto</span>    
   </div>
 
-  
   <%= form.hidden_field :lat, id: "js-lat" %>
   <%= form.hidden_field :lng, id: "js-lng" %>
-  
-  <%= form.submit "Enviar Alerta", class: "btn btn-primary" %>
-
   <%= form.file_field :photo, multiple: false, accept: 'image/png,image/jpeg'%>
+  
+
+  <%= form.submit "Alerta", class: "btn btn-primary" %>
 <% end %>
