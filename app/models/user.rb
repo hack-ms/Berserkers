@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :complaints, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :exchanges, dependent: :destroy
 
   def increment_score
     self.update(score: self.score + SCORE_POINTS)

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).on('turbolinks:load', function() {
 
   $('#button').click(function(){
     $("input[type='file']").trigger('click');

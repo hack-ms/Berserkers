@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :set_work, only: [:show, :edit, :update, :destroy]
+  before_action :set_work, only: [:show]
   before_action :authenticate_user!
 
   has_scope :by_city_id
@@ -11,6 +11,7 @@ class WorksController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(work_id: @work.id)
   end
 
   private
