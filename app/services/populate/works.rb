@@ -19,13 +19,13 @@ class Populate::Works < BaseService
 
   def create_works
     City.all.each do |city|
-      # city.works.create(get_works_from_city(city))
+      city.works.create(get_works_from_city(city))
     end
   end
 
   def update_work_type
     WorkType.all.each do |work_type|
-      # update_works(get_works_from_work_type(work_type), work_type)
+      update_works(get_works_from_work_type(work_type), work_type)
     end
   end
 
