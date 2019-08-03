@@ -1,7 +1,36 @@
 .new-complaint {
   h1 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 16px;
+  }
+
+  input[type='file'] {
+    opacity:0    
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+
+  .form-group {
+    text-align: center;
+
+    span {
+      text-transform: uppercase;
+      color: #3062BF;
+      font-weight: bold;
+      font-size: 14px;
+      align: center;
+    }
+  }
+
+  .btn-primary {
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 40px;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 16px;
   }
 }
