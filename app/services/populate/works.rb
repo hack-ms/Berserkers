@@ -52,7 +52,10 @@ class Populate::Works < BaseService
   end
 
   def update_work(work, parsed_page)
-    work.update(investment: parsed_page.css('b')[6].text, image_url: parsed_page.css('img').pluck(:src).select{ |src| src.include?('img') }.first )
+    work.update(investment: parsed_page.css('b')[6].text,
+                orgao_responsavel: parsed_page.css('b')[4].text,
+                executor: parsed_page.css('b')[5].text,
+                image_url: parsed_page.css('img').pluck(:src).select{ |src| src.include?('img') }.first )
   end
 
   def parsed_page(work)

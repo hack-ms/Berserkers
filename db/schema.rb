@@ -84,6 +84,8 @@ ActiveRecord::Schema.define(version: 2019_08_03_151649) do
     t.datetime "updated_at", null: false
     t.string "investment"
     t.string "image_url"
+    t.string "executor"
+    t.string "orgao_responsavel"
     t.index ["city_id"], name: "index_works_on_city_id"
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
