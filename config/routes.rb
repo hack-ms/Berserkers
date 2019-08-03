@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: "works#index"
 
   devise_for :users
+  resources :users, only: [:show]
+  
   resources :works, only: [:index, :show]
   resources :works, only: [] do
     resources :complaints, only: [:new, :create]
