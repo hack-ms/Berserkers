@@ -3,5 +3,7 @@ class Work < ApplicationRecord
   belongs_to :work_type, optional: true
 
   has_many :complaints, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  
   validates_uniqueness_of :idn_empreendimento
 end

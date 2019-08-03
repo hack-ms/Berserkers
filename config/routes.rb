@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :works, only: [:index, :show]
   resources :works, only: [] do
     resources :complaints, only: [:new, :create]
+    resources :favorites, only: [:create]
   end
 end
