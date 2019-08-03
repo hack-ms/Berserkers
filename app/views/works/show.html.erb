@@ -1,4 +1,3 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>
+<%= @work.id %>
+<%= link_to 'Fazer denúncia', new_work_complaint_path(@work) %>

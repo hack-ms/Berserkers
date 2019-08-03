@@ -1,0 +1,27 @@
+<%= form_with(model: complaint, url: work_complaints_path(@work), local: true) do |form| %>
+  <% if complaint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
+
+      <ul>
+      <% complaint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, required: true, autofocus: true %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :photo %>
+    <%= form.file_field :photo, multiple: false, accept: 'image/png,image/jpeg' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

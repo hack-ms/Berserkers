@@ -16,6 +16,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'httparty'
 gem 'devise'
 
+# Image upload
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
+gem 'rmagick'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
