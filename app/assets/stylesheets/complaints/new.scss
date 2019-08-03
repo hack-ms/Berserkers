@@ -1,4 +1,6 @@
 .new-complaint {
+  overflow-y: hidden;
+
   h1 {
     font-size: 16px;
     font-weight: bold;
@@ -27,10 +29,13 @@
 
   .btn-primary {
     text-transform: uppercase;
-    position: fixed;
+    position: absolute;
     bottom: 40px;
+    background-color: #3062BF;
     transform: translateX(-50%);
     left: 50%;
     font-size: 16px;
+    width: 82%;
+    font-weight: bold;
   }
 }
