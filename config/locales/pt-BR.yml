@@ -1,0 +1,142 @@
+pt-BR:
+  admin:
+    actions:
+      index:
+        title: Listagem
+        breadcrumb: Listagem
+        menu: Lista
+      new:
+        title: Cadastro
+        menu: Novo
+        breadcrumb: Cadastro
+        link: Adicionar
+      edit:
+        title: Editar
+        menu: Editar
+        link: Editar
+        breadcrumb: Editar
+      delete:
+        title: Remover
+        breadcrumb: Remover
+        menu: Remover
+      dashboard:
+        title: Painel de Controle
+        breadcrumb: Painel de Controle
+        menu: Visão Geral
+      show:
+        title: Informações
+        menu: Informações
+        breadcrumb: Informações
+      export:
+        title: Exportar %{model_label_plural}
+        menu: Exportar
+        breadcrumb: Exportar
+        link: Exportar %{model_label_plural}
+        bulk_link: Exportar %{model_label_plural} selecionados
+        done: Exportado
+      bulk_delete:
+        title: Remover seleção
+        breadcrumb: Remover seleção
+        bulk_link: Remover selecionados
+      show_in_app:
+        menu: Mostrar no Desu
+    misc:
+      search: Pesquisar
+      filter: Filtrar
+      bulk_menu_title: Mais opções
+      add_filter: Adicionar filtro
+      navigation: BackOffice
+      ago: atrás
+      refresh: Atualizar
+    flash:
+      successful: Sucesso!
+      error: Algo indesejado pode ter ocorrido, devido à ação executada
+      noaction: Nada aconteceu
+    form:
+      required: Obrigatório
+      optional: Opcional
+      char_length_up_to: "Limite de caracteres: "
+      save: Salvar
+      save_and_add_another: Salvar e Cadastrar Novo
+      save_and_edit: Salvar e Editar
+      confirmation: Confirmar
+      cancel: Cancelar
+      basic_info: Informações básicas
+      are_you_sure_you_want_to_delete_the_object: "Tem certeza que deseja remover "
+      all_of_the_following_related_items_will_be_deleted: "? Todos os itens relacionados abaixo serão deletados! "
+      new_model: Novo modelo
+      bulk_delete: "Tem certeza que deseja remover toda a seleção? Isso afetará os seguintes campos:"
+    export:
+      confirmation: Exportar para %{name}
+      select: Selecione os campos para exportar
+      select_all_fields: Selecionar todos os campos
+      fields_from: Campos de %{name}
+      fields_from_associated: Campos associados a %{name}
+      display: 'Mostrar %{name}: %{type}'
+      options_for: Opções para %{name}
+      empty_value_for_associated_objects: "<vazio>"
+      click_to_reverse_selection: Clique para reverter a seleção
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: Converter para
+        encoding_to_help: "Escolha o formato de saída. Deixe em branco para não mudar o formato atual: (%{name})"
+        skip_header: Sem cabeçalho
+        skip_header_help: Não incluir o cabeçalho
+        default_col_sep: ","
+        col_sep: Separador de coluna
+        col_sep_help: Deixe em branco para utilizar o padrão ('%{value}') # value is default_col_sep
+    home:
+      name: Ir para o Desu
+    table_headers:
+      model_name: Nome do Modelo
+      last_created: Última criação
+      records: Quantidade de cadastros
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: Menos de 1 minuto
+      about_x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      about_x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
+      x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
+      about_x_days:
+        one: "1 dia"
+        other: "%{count} dias"
+      x_days:
+        one: "1 dia"
+        other: "%{count} dias"
+      about_x_months:
+        one: "1 mes"
+        other: "%{count} meses"
+      x_months:
+        one: "1 mes"
+        other: "%{count} meses"
+  date:
+    formats:
+      month_year_long: "%B %Y"
+      month_year: "%m/%Y"
+      week_day_month_year: "%a, %m/%Y"
+      week_day_day_month: "%a, %d/%Y"
+      long: "%d/%m/%Y"
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    day_names: [Domingo, Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    week_day:
+      sun: 'Dom'
+      mon: 'Seg'
+      tue: 'Ter'
+      wed: 'Qua'
+      thu: 'Qui'
+      fri: 'Sex'
+      sat: 'Sáb'
+  time:
+    formats:
+      long: "%d/%m/%Y às %H:%M"
