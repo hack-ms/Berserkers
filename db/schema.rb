@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_03_034206) do
+ActiveRecord::Schema.define(version: 2019_08_03_043720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_08_03_034206) do
   end
 
   create_table "works", force: :cascade do |t|
-    t.decimal "lat", precision: 15, scale: 10
-    t.decimal "lng", precision: 15, scale: 10
+    t.string "lat"
+    t.string "lng"
     t.integer "idn_empreendimento"
     t.date "data_conclusao"
     t.date "data_selecao"
