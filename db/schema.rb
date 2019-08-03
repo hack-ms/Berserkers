@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_08_03_170704) do
     t.string "company_name"
     t.string "code"
     t.string "quantity", default: "0"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
