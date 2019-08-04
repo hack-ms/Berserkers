@@ -24,12 +24,12 @@ gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-aws'
 gem 'rmagick'
 
-#QUEUE
-# gem "sidekiq-cron"
-# gem 'sidekiq'
-# gem 'redis-namespace'
-# gem 'redis'
-# gem 'rufus-scheduler', '~> 3.4.0'
+# QUEUE
+gem "sidekiq-cron"
+gem 'sidekiq'
+gem 'redis-namespace'
+gem 'redis'
+gem 'rufus-scheduler', '~> 3.4.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
