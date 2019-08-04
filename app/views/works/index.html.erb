@@ -7,7 +7,7 @@
   <% @works.each do |work| %>
     <%= link_to work_path(work) do %>
       <div class="work-card">
-        <%= image_tag work.image_url || 'https://s3.amazonaws.com/jera-ligilo/img-placeholder-imovel.png' %>
+        <%= image_tag work.image_url || 'https://i.imgur.com/h95bUcm.png' %>
         <div class="work-description">
           <p class="work-name-index no-absolute"><%= work.obra_nome %></p>
           <p class="work-city-name-index"><%= work.city.name %></p>
