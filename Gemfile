@@ -24,7 +24,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-aws'
 gem 'rmagick'
 
-#QUEUE
+
+# QUEUE
 gem "sidekiq-cron"
 gem 'sidekiq'
 gem 'redis-namespace'

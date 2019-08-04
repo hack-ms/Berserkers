@@ -77,7 +77,6 @@
       }
       .display-grid {
         display: grid;
-        /*background-image: image-url("images/web_files/img_logo_login@3x.png"); TODO */ 
       }
       .image-frame {
         margin: 32px 64px 0;
@@ -120,7 +119,7 @@
                 <div class="side-padder">
 
                   <p class="text-font">
-                    <%= link_to 'VER OBRA NA APLICAÇÂO', work_url(@work), class: "button button-text" %>
+                    <%= link_to 'VER OBRA NA APLICAÇÂO', "https://acompanhai.herokuapp.com/works/#{@work.id}", class: "button button-text" %>
                   </p>
 
                 </div>

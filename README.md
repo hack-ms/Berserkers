@@ -37,12 +37,19 @@ $ rails s
 **URL para acessar**
 
 ```bash
-$ https://berserkersapp.herokuapp.com/
+$ https://acompanhai.herokuapp.com/
 
-$ https://berserkersapp.herokuapp.com/admin
+$ https://acompanhai.herokuapp.com/admin
 
 $ localhost:3000/
 
 $ localhost:3000/admin
 ```
 
+**LICENÇA**
+
+```bash
+
+$ Este projeto utiliza a licença MIT veja em LICENSE.md para mais detalhes
+  
+``

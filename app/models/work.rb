@@ -15,8 +15,11 @@ class Work < ApplicationRecord
   end
 
   private
-    def notify_interested_parties
-      NotifyInterestedsWorker.perfom_async(self.id)
-    end  
+
+  def notify_interested_parties
+    self.interested_users.find_each do |user|
+      ApplicationMailer.new_update_work(self.id, user.id).deliver_now
+    end
+  end
 
 end
