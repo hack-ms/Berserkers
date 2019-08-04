@@ -4,7 +4,7 @@ class ApplicationMailer < ActionMailer::Base
 
   def new_update_work(work_id, user_id)
     @work = Work.find_by(id: work_id)
-    @user = USer.find_by(id: user_id)
+    @user = User.find_by(id: user_id)
 
     if @work.present? && @user.present?
       mail(
