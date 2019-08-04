@@ -11,5 +11,6 @@ class User < ApplicationRecord
 
   def increment_score!
     self.update(score: self.score + SCORE_POINTS)
-  end 
+  end
+ 
 end
