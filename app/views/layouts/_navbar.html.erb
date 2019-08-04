@@ -1,13 +1,19 @@
-<div class="l-nav">
-  <div class="container container-navbar">
+<% unless current_page?(new_user_session_url) || current_page?(new_user_registration_url) %>
+  <div class="l-nav">
+    <div class="container container-navbar">
 
-    <div class="navigation">
-      <% unless current_page?(root_url) || current_page?(user_url(current_user.try(:id))) %>
-        <%= link_to define_back_url, class: "float-left" do %>
-          <%= image_tag 'ic_arrow_back.svg' %>
+      <div class="navigation">
+        <% unless current_page?(root_url) || current_page?(user_url(current_user.try(:id))) %>
+          <%= link_to define_back_url, class: "float-left" do %>
+            <%= image_tag 'ic_arrow_back.svg' %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
 
+        <div class="float-right">
+          <%= link_to 'Sair', destroy_user_session_path(:me), method: :delete, class: 'logout-link' %>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+<% end %>
