@@ -1,0 +1,4 @@
+fetch_updates_works_job:
+  cron: "0 */1 * * *"
+  class: "FetchUpdatesWorksWorker"
+

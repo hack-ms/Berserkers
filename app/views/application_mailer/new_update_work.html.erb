@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+      .side-padder {
+        padding: 26px 32px;
+      }
+      .header-font {
+        font-size: 26px;
+        margin-top: 0;
+        font-family: "Lucida Grande", Arial, sans-serif;
+        margin: 10px auto;
+        width: 50%;
+        text-align: center;
+      }
+      .text-font {
+        font-size: 18px;
+        color: #39393A;
+        font-family: "Lucida Grande", Arial, sans-serif;
+        margin: 10px auto;
+        width: 50%;
+        text-align: center;
+      }
+      .bold-font {
+        font-weight: 600;
+      }
+      .highlighted-text {
+        font-size: 16px;
+        color: #32A457;
+        font-weight: 600;
+        font-family: "Lucida Grande", Arial, sans-serif;
+      }
+      .footer-frame {
+        background-color: #32A457;
+        height: 104px;
+      }
+      .footer-text {
+        font-size: 14px;
+        color: #FFFFFF;
+        padding: 32px 0 32px 64px;
+        text-align: left; font-family: "Lucida Grande", Arial, sans-serif;
+      }
+      .divider {
+        border-top: solid 1px #32A457;
+        margin: 32px 0;
+      }
+      .outer-table {
+        margin-top: 16px;
+        background-color: #FFFFFF;
+        border: solid 1px #32A457;
+      }
+      .inner-table {
+        border-top: solid 4px #32A457;
+        float: left;
+      }
+      .button {
+        border: none;
+        font-size: 14px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 8px 8px 0 rgba(0,0,0,0.08);
+        font-weight: 400;
+        width: 20px;
+        height: 20px;
+        font-family: "Lucida Grande", Arial, sans-serif;
+        border-radius: 2px;
+        background-color: #06B6D6;
+        text-decoration: none;
+      }
+      .button:hover {
+        background-color: #4CB5AB;
+        text-decoration: none;
+      }
+      .button-text {
+        color: #FFFFFF;
+        padding: 16px;
+      }
+      .display-grid {
+        display: grid;
+        /*background-image: image-url("images/web_files/img_logo_login@3x.png"); TODO */ 
+      }
+      .image-frame {
+        margin: 32px 64px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table cellpadding="0" cellspacing="0" align="center" class="outer-table">
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="1024px" height="500px" class="inner-table">
+
+            <tr>
+              <td class="display-grid header-font">
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" class="side-padder">
+                <div class="side-padder">
+
+                  <p class="header-font">
+                    Atualização em uma obra de seu interesse
+                  </p>
+
+                  <p class="text-font">
+                    <span class="bold-font"> Obra: </span>
+                    INFO 01
+                  </p>
+
+                  <p class="text-font">
+                    <span class="bold-font"> LABEL 02: </span>
+                    INFO 02
+                  </p>
+
+                  <p class="text-font">
+                    <span class="bold-font"> LABEL </span>
+                    INFO 03
+                  </p>
+                </div>
+
+                <div class="divider-line"></div>
+
+                <div class="side-padder">
+
+                  <p class="text-font">
+                    <%= link_to 'VER OBRA NA APLICAÇÂO', "", class: "button button-text" %>
+                  </p>
+
+                </div>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="footer-frame">
+        <td valign="top" align="center">
+          <div class="footer-text">
+            <p>
+              <%= I18n.t('mailer.automatic_message') %>
+            </p>
+            <p>
+              <%= I18n.t('mailer.copyright_message', year: Time.current.year) %>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
