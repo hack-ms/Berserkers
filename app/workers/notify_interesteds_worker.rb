@@ -3,12 +3,13 @@ class NotifyInterestedsWorker
   sidekiq_options retry: 2
 
   def perform(work_id)
+    @work = Work.find_by(id: work_id)
 
-
-  end
-
-  private
-    def fetch_interesteds  
-
+    if @work.present?
+      @work.interested_users.find_each do |user| 
+        ApplicationMailer.new_update_work(@work, user).deliver_later
+      end  
     end
+  end 
+
 end

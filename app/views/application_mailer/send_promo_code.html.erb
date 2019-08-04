@@ -100,29 +100,23 @@
                 <div class="side-padder">
 
                   <p class="header-font">
-                    Olá <%= @user.name %>, atualização em uma obra de seu interesse! ;)
+                    Novo código promocional para você <%= @user.name %>
                   </p>
 
                   <p class="text-font">
-                    <span class="bold-font"> Nome da obra </span>
-                    <%= @work.obra_nome %>
+                    <span class="bold-font"> Nome da empresa </span>
+                    <%= @promo_code.company_name %>
                   </p>
 
                   <p class="text-font">
-                    <span class="bold-font"> Data de conclusão </span>
-                    <%= @work.data_conclusao %>
+                    <span class="bold-font"> Código </span>
+                    <%= @promo_code.code %>
                   </p>
-
-                </div>
-
-                <div class="divider-line"></div>
-
-                <div class="side-padder">
 
                   <p class="text-font">
-                    <%= link_to 'VER OBRA NA APLICAÇÂO', work_url(@work), class: "button button-text" %>
+                    <span class="bold-font"> Desconto cedido </span>
+                    <%= @promo_code.formatted_value %>
                   </p>
-
                 </div>
 
               </td>
