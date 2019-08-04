@@ -16,7 +16,7 @@ class Work < ApplicationRecord
 
   private
     def notify_interested_parties
-      NotifyInterestedsWorker.perfom_async(self.id)
-    end  
+      NotifyInterestedsWorker.perform_async(self.id)
+    end
 
 end
