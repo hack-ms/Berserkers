@@ -8,7 +8,7 @@ class ApplicationMailer < ActionMailer::Base
     if @work.present?
       mail(
         to: "",
-        from: ,
+        from: "",
         subject: ""
       )
     end

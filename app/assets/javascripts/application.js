@@ -16,3 +16,9 @@
 //= require turbolinks
 //= require_tree .
 //= require toastr
+
+$( document ).on('turbolinks:load', function() {
+  $('#back_page').on('click', function(){
+    window.history.go(-1);
+  });
+});
