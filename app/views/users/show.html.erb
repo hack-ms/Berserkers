@@ -1,3 +1,69 @@
-<p><%= current_user.name %></p>
-<p><%= current_user.email %></p>
-<p><%= current_user.score %></p>
+<div class="user-show">
+  <div class="user-name-box">
+    <p class="user-name"><%= current_user.name %></p>
+  </div>
+
+  <div class="user-info-box">
+    <div class="row">
+      <div class="col-4 my-auto">
+        <p class="user-score"><%= current_user.score %></p>
+        <p class="user-score-description">Pontos</p>
+      </div>
+      <div class="col-4 my-auto">
+        <%= image_tag "ic_user_trophie.svg", class: 'ic_user_trophie' %>
+      </div>
+      <div class="col-4 my-auto">
+        <p class="user-score"><%= current_user.complaints.count %></p>
+        <p class="user-score-description">Avaliações</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="user-description">Além de ajudar a sociedade, suas ações geram <span class="user-description-spotlight">pontos</span> que podem ser trocados por <span class="user-description-spotlight">recompensas</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to works_path do %>
+    <div class="user-info-box">
+      <div class="row">
+        <div class="col-3 my-auto">
+          <%= image_tag "ic_building.svg" %>
+        </div>
+        <div class="col-9 my-auto">
+          <p class="user-show-box-title">Obras da minha cidade</p>
+          <p class="user-show-box-description">Encontre as obras que estão sendo feitas na sua cidade para fazer a fiscalização.</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to user_promo_codes_path(:me) do %>
+    <div class="user-info-box">
+      <div class="row">
+        <div class="col-3 my-auto">
+          <%= image_tag "ic_voucher.svg" %>
+        </div>
+        <div class="col-9 my-auto">
+          <p class="user-show-box-title">Seus pontos viram descontos</p>
+          <p class="user-show-box-description">Vem conferir os cupons que estão disponíveis para resgate.</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to do  %>
+    <div class="user-info-box">
+      <div class="row">
+        <div class="col-3 my-auto">
+          <%= image_tag "ic_building.svg" %>
+        </div>
+        <div class="col-9 my-auto">
+          <p class="user-show-box-title">Acompanhamento de obras</p>
+          <p class="user-show-box-description">Aqui estão salvas as obras que você avaliou ou acompanha.</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>

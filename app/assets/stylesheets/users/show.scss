@@ -1,0 +1,69 @@
+.user-show {
+  .user-name-box {
+    width: 100vw;
+    height: 68px;
+    background-color: #204180;
+    text-align: center;
+    margin-left: -15px;
+    margin-top: -1px;
+    display: table;
+
+    .user-name {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 24px;
+    }
+  }
+
+  .user-info-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 18px;
+    background-color: white;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+
+    .row {
+      .col-4, .col-12, .col-9, .col-3 {
+        text-align: center;
+      }
+    }
+
+    .user-score {
+      color: #3062BF;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+
+    .user-score-description {
+      color: rgba(34, 34, 34, 1);
+      font-size: 14px;
+      opacity: 0.64;
+    }
+
+    .user-description {
+      margin-top: 20px;
+      color: rgba(34, 34, 34, 1);
+      font-size: 16px;
+    }
+
+    .user-description-spotlight {
+      color: rgba(32, 65, 128, 1);
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .user-show-box-title {
+      color: rgba(48, 98, 191, 1);
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .user-show-box-description {
+      color: rgba(0, 0, 0, 1);
+      opacity: 0.6;
+      font-size: 14px;
+    }
+  }
+}
