@@ -29,14 +29,20 @@ Por fim, crie o banco de dados, rode as migrations e popule o mesmo.
 $ rails db:create db:migrate db:seed
 ```
 
-**URL para acessar**
-```bash
-$ https://berserkersapp.herokuapp.com/
-
-$ https://berserkersapp.herokuapp.com/admin
-```
-
 **Start do servidor**
 ```bash
 $ rails s
 ```
+
+**URL para acessar**
+
+```bash
+$ https://berserkersapp.herokuapp.com/
+
+$ https://berserkersapp.herokuapp.com/admin
+
+$ localhost:3000/
+
+$ localhost:3000/admin
+```
+
