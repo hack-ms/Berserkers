@@ -3,6 +3,10 @@ class FavoritesController < ApplicationController
   before_action :set_favorite, only: [:destroy]
   before_action :authenticate_user!
 
+  def index
+    @favorites = current_user.favorites
+  end
+
   def create
     favorite = current_user.favorites.create(work: @work)
 
@@ -28,11 +32,11 @@ class FavoritesController < ApplicationController
   private
     def set_work
       @work = Work.find_by(id: params[:work_id])
-      return redirect_to works_path unless @work.present?        
+      return redirect_to works_path unless @work.present?
     end
 
     def set_favorite
       @favorite = current_user.favorites.find_by(work: @work)
-      return redirect_to work_path(@work) unless @favorite.present?        
+      return redirect_to work_path(@work) unless @favorite.present?
     end
 end

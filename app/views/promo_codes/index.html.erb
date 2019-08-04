@@ -8,15 +8,15 @@
           <div class="col-12">
             <div class="promo-card">
               <div class="row">
-                <div class="col-4 price line">
+                <div class="col-4 price line my-auto">
                   <%= promo_code.required_points %>
-                  <span>Pontos</span> 
-                </div>  
-                <div class="col-8 description">
+                  <span>Pontos</span>
+                </div>
+                <div class="col-8 description my-auto">
                   <p class="title">
                     Cupom de <%= promo_code.formatted_value %> - <%= promo_code.company_name.truncate(10) %>
                   </p>
-                  <span><%= promo_code.description.truncate(30) %></span>  
+                  <span><%= promo_code.description.truncate(30) %></span>
                 </div>
               </div>
             </div>
@@ -25,7 +25,7 @@
       <% end %>
     <% end %>
   <% else %>
-    Sem código promocionais para sua pontuação      
+    Sem código promocionais para sua pontuação
   <% end %>
 </div>
 

@@ -7,9 +7,6 @@ class PromoCode < ApplicationRecord
 
 
   def decrement_quantity!
-    new_quantity = self.quantity--
-    new_quantity = 0 unless new_quantity >= 0 
-    
-    self.update(quantity: self.quantity)
+    update(quantity: quantity - 1)
   end
 end

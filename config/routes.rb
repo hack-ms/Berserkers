@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :promo_codes, only: [:index, :show]
+    resources :favorites, only: :index
   end
 
   resources :promo_codes, only: [] do
