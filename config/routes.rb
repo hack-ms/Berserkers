@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  root to: "works#index"
+  root to: "users#show"
 
   devise_for :users
 
-  resources :users, only: [:show] do 
+  resources :users, only: [:show] do
     resources :promo_codes, only: [:index, :show]
   end
 
