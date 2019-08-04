@@ -31,9 +31,9 @@ $ rails db:create db:migrate db:seed
 
 **URL para acessar**
 ```bash
-$ https://berserkersapp.herokuapp.com/
+$ https://acompanhai.herokuapp.com/
 
-$ https://berserkersapp.herokuapp.com/admin
+$ https://acompanhai.herokuapp.com/admin
 ```
 
 **Start do servidor**
