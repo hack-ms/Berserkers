@@ -2,7 +2,7 @@ pt-BR:
   activerecord:
     models:
       city: Cidade
-      complaint: Feedback
+      complaint: Avaliação
       favorite: Acompanhamento
       promo_code: Códigos promocionais
       user: Usuário

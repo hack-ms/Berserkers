@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :works, only: [:index, :show] do
-    resources :complaints, only: [:new, :create]
+    resources :complaints, only: [:new, :create, :edit, :update]
     resources :favorites, only: [:create, :destroy]
   end
 end

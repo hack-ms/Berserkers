@@ -91,6 +91,8 @@
   <% else %>
   <%= link_to 'ACOMPANHAR OBRA', work_favorites_path(@work), method: :post, class: 'btn btn-primary favorite-btn' %>
   <% end %>
-
-  <%= link_to 'AVALIAR OBRA', new_work_complaint_path(@work), class: 'btn btn-primary complaint-btn' %>
+  
+  <% if @complaint.nil? %>
+    <%= link_to 'AVALIAR OBRA', new_work_complaint_path(@work), class: 'btn btn-primary complaint-btn' %>
+  <% end %>
 </div>

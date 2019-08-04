@@ -12,6 +12,7 @@ class WorksController < ApplicationController
 
   def show
     @favorite = current_user.favorites.find_by(work_id: @work.id)
+    @complaint = current_user.complaints.find_by(work_id: @work.id)
   end
 
   private
