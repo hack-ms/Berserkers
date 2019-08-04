@@ -9,8 +9,15 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :exchanges, dependent: :destroy
 
+  before_create :initial_score!
+
   def increment_score!
     self.update(score: self.score + SCORE_POINTS)
   end
+
+  private
+    def initial_score!
+      score = rand(50..120)
+    end
  
 end

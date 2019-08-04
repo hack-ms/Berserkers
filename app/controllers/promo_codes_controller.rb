@@ -3,7 +3,7 @@ class PromoCodesController < ApplicationController
   before_action :set_promo_code, only: [:show]
 
   def index 
-    @promo_codes = PromoCode.where(required_points: 0..current_user.score).where.not(quantity: 0)  
+    @promo_codes = PromoCode.where.not(quantity: 0)  
   end
 
   def show

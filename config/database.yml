@@ -3,6 +3,6 @@ development:
   encoding: unicode
   database: berserkers_development
   pool: 5
-  username: root
+  username: postgres
   password: root
   host: localhost

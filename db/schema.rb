@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(version: 2019_08_04_030340) do
   create_table "promo_codes", force: :cascade do |t|
     t.string "company_name"
     t.string "code"
-    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "required_points", default: 1
     t.string "formatted_value"
     t.string "company_logo"
+    t.text "description"
     t.integer "quantity"
   end
 

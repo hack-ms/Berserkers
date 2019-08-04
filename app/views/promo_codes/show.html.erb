@@ -6,7 +6,11 @@
       <div class="promo-card">
         <div class="row">
           <div class="col-4 order-first my-auto">
-           <%= image_tag "#{@promo_code.company_name}.png", class: "logo" %>
+            <% if @promo_code.company_logo.present? %>
+              <%= image_tag @promo_code.company_logo.url, class: "logo" %>
+            <% else %>
+              <%= image_tag "placeholder.jpg", class: "logo" %>
+            <% end %>
           </div>
           <div class="col-4 my-auto">
             <p class="promo-code-description"><%= @promo_code.required_points %></p>
@@ -21,7 +25,7 @@
     </div>
   </div>
 
-  <p class="description">Descrição Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+  <p class="description"><%= @promo_code.description %></p>
 
   <%= link_to 'PEGAR CUPOM', promo_code_exchanges_path(@promo_code), method: :post, class: 'btn btn-primary exchange-btn' %>
 </div>
