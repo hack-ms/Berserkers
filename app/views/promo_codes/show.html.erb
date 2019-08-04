@@ -4,26 +4,25 @@
   <div class="row">
     <div class="col-12">
       <div class="promo-card">
-        <div class="container">
-          <div class="row">
-            <div class="col order-first">
-             <%= image_tag "hospital.png", class: "logo" %>
-            </div>
-            <div class="col">
-              <%= @promo_code.required_points %>
-            </div>
-            <div class="col">
-              a
-            </div>
-                        
-            <div class="col order-last">
-              <%= @promo_code.formatted_value %>
-            </div>
+        <div class="row">
+          <div class="col-4 order-first my-auto">
+           <%= image_tag "#{@promo_code.company_name}.png", class: "logo" %>
+          </div>
+          <div class="col-4 my-auto">
+            <p class="promo-code-description"><%= @promo_code.required_points %></p>
+            <span>pontos</span>
+          </div>
+          <div class="col-4 order-last my-auto">
+            <p class="promo-code-description"><%= @promo_code.formatted_value %></p>
+            <span>de desconto</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- TODO link expense create -->
+
+  <p class="description">Descrição Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+
+  <%= link_to 'PEGAR CUPOM', promo_code_exchanges_path(@promo_code), method: :post, class: 'btn btn-primary exchange-btn' %>
 </div>
 
