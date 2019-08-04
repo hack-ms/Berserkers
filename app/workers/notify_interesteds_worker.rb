@@ -7,7 +7,7 @@ class NotifyInterestedsWorker
 
     if @work.present?
       @work.interested_users.find_each do |user| 
-        ApplicationMailer.new_update_work(@work, user).deliver_later
+        ApplicationMailer.new_update_work(@work.id, user.id).deliver_later
       end  
     end
   end 

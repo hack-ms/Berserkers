@@ -7,9 +7,11 @@ class ExchangesController < ApplicationController
     exchange = current_user.exchanges.create(promo_code: @promo_code)   
     
     if exchange.persisted?
+
       @promo_code.decrement_quantity!
       current_user.update(score: current_user.score - @promo_code.required_points)
-
+      ApplicationMailer.send_promo_code(@promo_code.id, current_user.id).deliver_later
+      
       flash[:notice] = "Sucesso! Verifique no seu email o código promocional"
     else
       flash[:error] = "Ocorreu um erro ao resgatar o código"
