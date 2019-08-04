@@ -2,9 +2,11 @@
   <div class="container container-navbar">
 
     <div class="navigation">
-      <div class="float-left">
-        <%= image_tag 'ic_arrow_back.svg', id: 'back_page' %>
-      </div>
+      <% unless current_page?(root_url) || current_page?(user_url(current_user.try(:id))) %>
+        <%= link_to define_back_url, class: "float-left" do %>
+          <%= image_tag 'ic_arrow_back.svg' %>
+        <% end %>
+      <% end %>
     </div>
 
   </div>
