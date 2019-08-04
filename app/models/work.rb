@@ -16,7 +16,7 @@ class Work < ApplicationRecord
 
   private
     def notify_interested_parties
-      #TODO
+      NotifyInterestedsWorker.perfom_async(self.id)
     end  
 
 end
