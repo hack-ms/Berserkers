@@ -6,6 +6,10 @@
   </div>
 
   <div class="field">
+    <%= f.text_field :name, placeholder: 'Nome' %>
+  </div>
+
+  <div class="field">
     <%= f.password_field :password, placeholder: 'Senha' %>
   </div>
 
@@ -16,7 +20,7 @@
   <div class="actions">
     <%= f.submit "Cadastrar", class: 'session-btn' %>
   </div>
-  
+
   <%= render "devise/shared/links" %>
 <% end %>
 
