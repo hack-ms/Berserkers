@@ -10,4 +10,15 @@ module ApplicationHelper
     end
     flash_messages.join("\n").html_safe
   end
+
+  def define_back_url
+    if request.path.include?("complaints/new")
+      work_path(params[:work_id])
+    elsif request.path.include?("/promo_codes/")
+      user_promo_codes_path(:me)
+    else
+      root_path
+    end
+  end
+
 end
