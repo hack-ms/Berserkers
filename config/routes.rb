@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  get :matches, controller: :application_controller
+  get '/matches', controller: :application, action: :matches
 
   root to: "users#show"
 
