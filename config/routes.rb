@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  get :matches, controller: :application_controller
+
   root to: "users#show"
 
   devise_for :users, controllers: {
