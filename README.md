@@ -29,14 +29,27 @@ Por fim, crie o banco de dados, rode as migrations e popule o mesmo.
 $ rails db:create db:migrate db:seed
 ```
 
-**URL para acessar**
-```bash
-$ https://acompanhai.herokuapp.com/
-
-$ https://acompanhai.herokuapp.com/admin
-```
-
 **Start do servidor**
 ```bash
 $ rails s
 ```
+
+**URL para acessar**
+
+```bash
+$ https://acompanhai.herokuapp.com/
+
+$ https://acompanhai.herokuapp.com/admin
+
+$ localhost:3000/
+
+$ localhost:3000/admin
+```
+
+**LICENÇA**
+
+```bash
+
+$ Este projeto utiliza a licença MIT veja em LICENSE.md para mais detalhes
+  
+``

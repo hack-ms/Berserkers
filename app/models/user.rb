@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   private
     def initial_score!
-      score = rand(50..120)
+      self.assign_attributes(score: rand(50..120)) 
     end
  
 end
